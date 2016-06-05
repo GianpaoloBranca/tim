@@ -1,0 +1,124 @@
+div.topHome{
+    background-color: blue;
+}
+
+table.Landmarks{
+    background-color: azure;
+    border-radius: 0.2em;
+}
+
+p{
+    text-align: center;
+    color: azure;
+    font-family: serif;
+    font-size: 1.2em;
+}
+
+a:link{
+    text-decoration: none;
+}
+
+a:visited{
+    text-decoration-color: darkmagenta;
+}
+
+a:hover{
+    text-decoration-color: #FFA500;
+}
+
+body{
+    /*background-color: #1E90FF;*/
+    background-image: linear-gradient(to top , #00008B 0%, #1E90FF 100%);
+    /*background-image: radial-gradient(to center, circle farthest-corner, #FFFFFF 0%, #00A3EF 100%);*/
+
+}
+
+div.DIV1{
+    background-color: #6495ED;
+    position: relative;
+    top: 10px;
+}
+
+div.DIV2{
+    background-color: #FFA500;
+    position: relative;
+     top: 20px;
+    
+}
+
+
+div.DIV3{
+    background-color: #00FA9A;
+     position: relative;
+    top: 30px;
+   
+}
+
+div.DIV4{
+    background-color: #FFD700;
+     position: relative;
+     top: 40px;
+}
+
+div.DIV5{
+    background-color:#FF1493;
+     position: relative;
+     top: 50px;
+}
+
+div.DIV6{
+    background-color:#9370DB;
+     position: relative;
+    top: 60px;
+}
+
+div{
+    border-color: black;
+    border-radius: 0.7em;
+}
+
+table{
+    align-self: center;
+}
+
+td{
+    text-align: center;
+    width: 40em;
+}
+
+h1{
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+}
+
+h3{
+    text-align: center;
+}
+
+
+
+img.groupMenu{
+    border-radius: 0.7em;
+    height: 10em;
+    width: 15em;
+}
+
+td.PreviousButton{
+    text-align: left;
+}
+
+td.NextButton{
+    text-align: right;
+}
+
+div.ImmagineTV{
+    text-align: center
+}
+
+img.ImmagineTV{
+    border-radius: 1.5em;
+    margin-left: auto;
+}
