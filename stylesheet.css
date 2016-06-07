@@ -1,5 +1,17 @@
-.thumb1 { 
-background: url(blah.jpg) 50% 50% no-repeat; /* 50% 50% centers image in div */
-width: 250px;
-height: 250px;
+.crop-square {
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+}
+
+.very-large {
+  font-size: 4em;
+}
+
+.indent {
+  margin-left: 40px;
+}
+
+.bordered {
+  border: 2px solid black;
 }
