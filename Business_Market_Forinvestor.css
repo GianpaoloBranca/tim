@@ -1,0 +1,33 @@
+#banner_image{
+  display:block;
+  width:auto;
+  height:auto;
+  max-height:100px;
+}
+
+#banner{
+  background-color:#0B3D86;
+  padding-top:10px;
+  padding-bottom:10px;
+  padding-left:20px;
+}
+
+.btn-primary{
+  margin-top:10px;
+  margin-bottom:10px;
+}
+
+#sidebar{
+  background-color:#009999;
+  height:4400px;
+}
+
+.p_title{
+  color:#00ffff;
+  font-size:20px;
+}
+
+.p{
+  margin-top: 10px;
+  margin-bottom:10px;
+}

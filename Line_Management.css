@@ -1,0 +1,17 @@
+#banner_image{
+  display:block;
+  width:auto;
+  height:auto;
+  max-height:100px;
+}
+
+#banner{
+  background-color:#0B3D86;
+  padding-top:10px;
+  padding-bottom:10px;
+  padding-left:20px;
+}
+
+#casetta{
+  max-height: 400px;
+}

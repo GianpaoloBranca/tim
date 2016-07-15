@@ -4,6 +4,10 @@
   overflow: hidden;
 }
 
+.large {
+  font-size: 1.6em;
+}
+
 .very-large {
   font-size: 4em;
 }
@@ -16,8 +20,123 @@
   border: 2px solid black;
 }
 
+.inside {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.row-height {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+}
+
+.col-height {
+  display: table-cell;
+  float: none;
+  height: 100%;
+}
+
+.col-top {
+  vertical-align: top;
+}
+.col-middle {
+  vertical-align: middle;
+}
+.col-bottom {
+  vertical-align: bottom;
+}
+
+.no-margin-bottom {
+  margin-bottom: 0px;
+}
+
+#banner_image{
+  display:block;
+  width:auto;
+  height:auto;
+  max-height:100px;
+}
+
+#banner{
+  background-color:#0B3D86;
+  padding-top:10px;
+  padding-bottom:10px;
+  padding-left:20px;
+}
+
+
+
+body.backgroundSL{
+    /*background-color: #1E90FF;*/
+    background-image: linear-gradient(to top , #00008B 0%, #1E90FF 100%);
+    /*background-image: radial-gradient(to center, circle farthest-corner, #FFFFFF 0%, #00A3EF 100%);*/
+
+}
+
 div.DIV1{
     background-color: white;
     position: relative;
     top: 10px;
+    border-color: black;
+    border-radius: 0.7em;
 }
+
+div.DIV2{
+    background-color: #FFA500;
+    position: relative;
+     top: 20px;
+     border-color: black;
+    border-radius: 0.7em;
+    
+}
+
+
+div.DIV3{
+    background-color: #00FA9A;
+     position: relative;
+    top: 30px;
+    border-color: black;
+    border-radius: 0.7em;
+   
+}
+
+div.DIV4{
+    background-color: #FFD700;
+     position: relative;
+     top: 40px;
+     border-color: black;
+    border-radius: 0.7em;
+}
+
+div.DIV5{
+    background-color:#FF1493;
+     position: relative;
+     top: 50px;
+     border-color: black;
+    border-radius: 0.7em;
+}
+
+div.DIV6{
+    background-color:#9370DB;
+     position: relative;
+    top: 60px;
+    border-color: black;
+    border-radius: 0.7em;
+}
+img.groupMenuSL{
+    border-radius: 0.7em;
+    height: 10em;
+    width: 15em;
+}
+
+div.simpleBoxSL{
+ border-color: white;
+ text-align: center;
+
+ 
+}
+p.textColorWhite{
+	color : white;
+}
+

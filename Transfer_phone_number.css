@@ -1,0 +1,25 @@
+#banner_image{
+  display:block;
+  width:auto;
+  height:auto;
+  max-height:100px;
+}
+
+#banner{
+  background-color:#0B3D86;
+  padding-top:10px;
+  padding-bottom:10px;
+  padding-left:20px;
+}
+
+#sidebar{
+  color:#006699;
+  background-color:#80ccff;
+  font-size:20px;
+  height:600px;
+}
+
+.btn-group{
+  margin-top:10px;
+  margin-bottom:10px;
+}
