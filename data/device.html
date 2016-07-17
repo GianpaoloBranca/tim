@@ -10,7 +10,7 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-    <link rel="stylesheet" href="stylesheet.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="../css/stylesheet.css" media="screen" title="no title" charset="utf-8">
     <title></title>
   </head>
   <body>
@@ -48,7 +48,7 @@
           <br>
           <br>
           <p class="large" id="price">
-            <a class="btn btn-danger" href="#" role="button" disabled="disabled">Buy now</a>    
+            <a class="btn btn-danger" href="#" role="button" disabled="disabled">Buy now</a>
           </p>
         </div>
         <div class="col-md-1 col-md-offset-1 col-sm-3 col-xs-3 bordered" id="next">
@@ -95,14 +95,14 @@
                                      + "<br>Dimensions: " + decoded.dimensions
                                      + "<br>Weight:" + decoded.weight
                                      + "g<br>");
-            $("#prev-page").append("<a href='devices-by-category.html?type=" + decoded.type + "'>" 
+            $("#prev-page").append("<a href='devices-by-category.html?type=" + decoded.type + "'>"
                                    + decoded.type + "</a>");
             $("#all-data").append(decoded.other);
-            
+
             if(decoded.discount == 0) {
               $("#price").append(decoded.price + "€");
             } else {
-              $("#price").append("<span style='color:red'><b>" 
+              $("#price").append("<span style='color:red'><b>"
               					 + (decoded.price - decoded.discount)
                                  + "€ </b></span><del>"
                                  + decoded.price + "€</del>");
@@ -110,10 +110,10 @@
 
 			$("#sl-btn").attr("href", "device-sl.html?id=" + id);
 
-            $.get('http://timwebs.altervista.org/query-images.php?url=' + decoded.name, {  
+            $.get('http://timwebs.altervista.org/query-images.php?url=' + decoded.name, {
             }).done(function(gotData) {
               console.log(gotData);
-              $("#gallery").append(gotData); 
+              $("#gallery").append(gotData);
             });
 
             $.get('http://timwebs.altervista.org/query-device.php?id=' + decoded.next, {
@@ -121,7 +121,7 @@
               try{
                 console.log(gotData);
                 decoded = JSON.parse(gotData);
-                $("#next").append("<a href='device.html?id=" + decoded.id + 
+                $("#next").append("<a href='device.html?id=" + decoded.id +
                 				"' ><img src='img/d_" + decoded.name + "_0.jpg' width='100%' /></a>");
               }catch (Exception) {
                 console.log(Exception);
