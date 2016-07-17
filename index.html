@@ -20,9 +20,16 @@
     <a href="data/devices.html">
     <h1>HELLO</h1></a>
     <script>
-      $.get('http://timwebs.altervista.org/query-header.php', {
+      $.get('http://timwebs.altervista.org/query-header.php',
+      crossDomain: true, {
       }).done(function(gotData) {
         $("#header").append(gotData);
+      });
+    </script>
+    <script>
+    $(document).bind("mobileinit", function () {
+        $.support.cors = true;
+        $.mobile.allowCrossDomainPages = true;
       });
     </script>
   </body>
