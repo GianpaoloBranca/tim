@@ -14,8 +14,20 @@
     <title>Devices</title>
   </head>
   <body>
-    <div id="header">
-    </div>
+    <div id="banner">
+    <img id="banner_image" src="http://www.diregiovani.it/wp-content/uploads/2016/01/Il-nuovo-Marchio-TIM_13-gennaio-2016.jpg">
+</div>
+<nav class="navbar navbar-default no-margin-bottom">
+  <div class="container-fluid">
+	<ul class="nav nav-pills">
+      <li role="presentation"><a href="#">Assistance</a></li>
+      <li role="presentation"><a href="data/devices.html">Devices</a></li>
+      <li role="presentation"><a href="data/SmartLifePage.html">Smart Life</a></li>
+      <li role="presentation"><a href="data/Projects.html">Who we are</a></li>
+      <li role="presentation"><a href="data/the-group.html">The group</a></li>
+    </ul>
+  </div>
+</nav>
     <a href="devices.html">
     <h1>HELLO</h1></a>
     <script>
@@ -25,5 +37,11 @@
       }).fail(function(e) {
       });
     </script>
+    <script type="text/javascript">
+      $(document).bind("mobileinit", function () {
+          $.support.cors = true;
+          $.mobile.allowCrossDomainPages = true;
+      });
+  </script>
   </body>
 </html>

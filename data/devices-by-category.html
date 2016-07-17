@@ -10,7 +10,7 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-    <link rel="stylesheet" href="../css/stylesheet.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="stylesheet.css" media="screen" title="no title" charset="utf-8">
     <title></title>
   </head>
   <body id="body">
@@ -48,7 +48,7 @@
 
           if (sParameterName[0] === sParam) {
             return sParameterName[1] === undefined ? true : sParameterName[1];
-          }
+          }	
         }
       };
       var deviceType = getUrlParameter('type');
@@ -62,14 +62,14 @@
           parser(gotData);
         });
       } else {
-
+      
 		document.title = deviceType;
         $("#page-name").append(deviceType);
         $.get('http://timwebs.altervista.org/query-devices.php?type=' + deviceType, {
         }).done(function(gotData) {
         	parser(gotData);
         });
-
+      
       function parser(gotData) {
         try{
           decoded = JSON.parse(gotData);
