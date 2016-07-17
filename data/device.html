@@ -98,7 +98,15 @@
             $("#prev-page").append("<a href='devices-by-category.html?type=" + decoded.type + "'>" 
                                    + decoded.type + "</a>");
             $("#all-data").append(decoded.other);
-            $("#price").append(decoded.price + "€");
+            
+            if(decoded.discount == 0) {
+              $("#price").append(decoded.price + "€");
+            } else {
+              $("#price").append("<span style='color:red'><b>" 
+              					 + (decoded.price - decoded.discount)
+                                 + "€ </b></span><del>"
+                                 + decoded.price + "€</del>");
+            }
 
 			$("#sl-btn").attr("href", "device-sl.html?id=" + id);
 
@@ -108,7 +116,7 @@
               $("#gallery").append(gotData); 
             });
 
-            $.get('http://timwebs.altervista.org/query-device.phpp?id=' + decoded.next, {
+            $.get('http://timwebs.altervista.org/query-device.php?id=' + decoded.next, {
             }).done(function(gotData) {
               try{
                 console.log(gotData);

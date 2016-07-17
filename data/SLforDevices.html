@@ -14,8 +14,10 @@
   <title></title>
 </head>
 <body>
-<div  width="75%" id ="list">	
+
+<div  class="DIV0" width="75%" id ="list">	
 </div>
+
 
 <div id ="paginaVuota">
 </div>
@@ -46,11 +48,11 @@
       decoded = JSON.parse(gotData);
       
       if (Object.keys(decoded).length == 0){
-      	$("#paginaVuota").append("<p> THERE ARE NO LINKS </p> <a href='SLservice.html?name="+name+"'> GO BACK</a>");
+      	$("#paginaVuota").append("<p> THERE ARE NO LINKS </p> <a href='SLservice.html?id="+id+"'> GO BACK</a>");
       }
        else{   
       for (var i = 0; i < Object.keys(decoded).length; i++){
-          $("#list").append("<a href='device.html?id="+decoded[i].id + "'>"+"<img width='50em' src='/img/d_"+decoded[i].name+"_0.jpg'/>" + decoded[i].name + "</a>");
+          $("#list").append("<div><a href='device.html?id="+decoded[i].id + "'><table align-center ><tr><td>"+"<img width='50em' src='/img/d_"+decoded[i].name+"_0.jpg'/></td><td>" + decoded[i].name + "</td></tr></table></a></div>");
       
       
       	

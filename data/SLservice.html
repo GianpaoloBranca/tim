@@ -26,7 +26,13 @@
 
     </ol>
 
-
+	<table align="center" width="80%">
+    <tr>
+    <td align-left   id="prev"> </td>
+    <td id="pro"> </td> 
+    <td align-left   id="next"> </td>
+    </tr>
+    </table>
 
     <h2 align="center" id="title" style="color: white">
     </h2>
@@ -75,22 +81,30 @@
           }
         }
       };
-      var service = getUrlParameter('name');
+      var service = getUrlParameter('id');
       var decoded;
       document.title = service;
-      $.get('http://timwebs.altervista.org/SLServiceData.php?name=' + service, {
+      $.get('http://timwebs.altervista.org/SLServiceData.php?id=' + service, {
       }).done(function(gotData) {
         try{
           console.log(gotData);
           decoded = JSON.parse(gotData);
           $("#title").append(decoded.name);
-
+          var a = (parseInt(decoded.id)-1);
+          if (a <= 0){a="23";}
+         
+          else{a.toString();}
+		$("#prev").append("<a href='SLservice.html?id=" + a + "'><div width='20%' > <p align='left' style='color: white'> prev </p></div> </a>");
+       	 var a = (parseInt(decoded.id)+1);
+          if (a >= 23){a="1";}
+          else{a.toString();}
+       $("#next").append("<a href='SLservice.html?id=" + a + "'><div width='20%'  > <p align='right' style='color: white'> next </p></div> </a>");
 
           $("#category").append("<a href='SLServicesByCat.html?type=" + decoded.type + "'>" 
                                 + decoded.type + "</a>");
 
           $("#se").append(decoded.name);
-
+			$("#pro").append("<h2 style='color : red'>"+decoded.pro +"</h2>");
 		 $("#devices").append("<a href='SLforDevices.html?id="+ decoded.id + "&name="+ decoded.name +"'> <img width='60%' src='/img/SL-DeviceLink.png'/></a>");
 
 

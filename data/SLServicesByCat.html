@@ -58,13 +58,14 @@
           console.log(decoded);
           for(var i = 0; i <  Object.keys(decoded).length; i++) {
             console.log(decoded[i].name);
+            
             var $div = 
                 /* $("<div><p>"  + decoded[i].name + "</p></div>"
                     ); */
 
                 $(
                   "<div>" + 
-                  "<a href='SLservice.html?name=" +  decoded[i].name + "' >"+
+                  "<a href='SLservice.html?id=" +  decoded[i].id + "' >"+
 
                   "<table width='75%' border='1' align='center'>" + 
                   "<tr>" +
