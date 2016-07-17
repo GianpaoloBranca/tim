@@ -11,8 +11,6 @@
         Our Telecom app
     </description>
 
-    <author href="http://coenraets.org" email="ccoenraets@gmail.com">
-
     </author>
 
     <feature name="http://api.phonegap.com/1.0/camera"/>
