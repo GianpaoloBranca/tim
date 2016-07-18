@@ -10,76 +10,76 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-    <link rel="stylesheet" href="data/stylesheet.css" media="screen" title="no title" charset="utf-8">
-    <title>Home</title>
+    <link rel="stylesheet" href="stylesheet.css" media="screen" title="no title" charset=“utf-8”>
+    <title>The Group</title>
   </head>
-  <body>
-    <div id="banner">
-      <img id="banner_image" src="http://www.diregiovani.it/wp-content/uploads/2016/01/Il-nuovo-Marchio-TIM_13-gennaio-2016.jpg">
-    </div>
-    <nav class="navbar navbar-default no-margin-bottom">
-      <div class="container-fluid">
-        <ul class="nav nav-pills">
-          <li role="presentation"><a href="data/Categories_of_assistance_services.html">Assistance</a></li>
-          <li role="presentation"><a href="data/devices.html">Devices</a></li>
-          <li role="presentation"><a href="data/SmartLifePage.html">Smart Life</a></li>
-          <li role="presentation"><a href="data/Projects.html">Who we are</a></li>
-          <li role="presentation"><a href="data/the-group.html">The group</a></li>
-        </ul>
+<body>
+  <div id="header">
+  </div>
+  <div class="container-fluid">
+  <div class="row">
+    <div class="row-height">
+      <div class="col-md-2 col-sm-3 col-xs-3 col-height col-top" style="background-color:#2B60DE">
+      	  <br>
+          <a href="the-group.html" class="btn btn-primary btn-block" style="white-space: normal;">Group Description</a>
+          <br>
+          <a href="Business_Market_Forinvestor.html" class="btn btn-primary btn-block" style="white-space: normal;">Business and Market</a>
       </div>
-    </nav>
-   
-      
-        <div style="background-image: url(http://timwebs.altervista.org/data/img/main.jpg);">
-          <h2 style="color: white">
-            Welcome in the first italian telecom company!
-            </h2>
+      <div class="col-md-10 col-sm-9 col-xs-9 col-height">
+        <div class="inside">
+          <p class="text-center h1">
+            <i>NEWS </i>
+          </p>
             
+            <div style="background-image: url(http://timwebs.altervista.org/data/img/news.png);">
+               
+                 <div class="infoBOX" >
+                     <p style="color:blue"> TIM MARKET </p> 
+                     <p style="color:blue"> 12/05/2016 - 14:30</p>
+                     <p style="color:blue"> TIM just launched TIMreading Audiobook</p>
+                </div> 
+                <br/>
+                <br/>
+                 <div class="infoBOX" >
+                     <p style="color:blue"> TIM CORPORATE </p> 
+                     <p style="color:blue"> 12/05/2016 - 12:49</p>
+                     <p style="color:blue"> TELECOM ITALY : Stefano De Angelis is the new chief executive officer of TIM Brasil</p>
+                </div> 
+                <br/>
+                <br/>
+                 <div class="infoBOX">
+                     <p style="color:blue"> TIM  </p> 
+                     <p style="color:blue"> 09/03/2016 - 14:30</p>
+                     <p style="color:blue"> TIM Present: the innovation is coming</p>
+                </div> 
+                <br/>
+                <br/>
+                 <div class="infoBOX">
+                     <p style="color:blue"> TIM MARKET </p> 
+                     <p style="color:blue"> 09/02/2016 - 14:30</p>
+                     <p style="color:blue"> TIM Present: TIM's fiber optic network</p>
+                </div>
+                <br/>
+                <br/>
+                <div class="infoBOX">
+                     <p style="color:blue"> TIM MARKET </p> 
+                     <p style="color:blue"> 09/02/2016 - 14:30</p>
+                     <p style="color:blue"> TIM partner of the social Media Week Milan 2016</p>
+                </div>
+                <br/>
+                <br/>
+                
+            </div>
+         
+        </div>
       </div>
-      <div>
-      <h2 style="color:black">
-          More than what you think
-          </h2>
-          
-          <table width='90%'>
-              <tr>
-              <td width='50%'>
-                  <p>
-                  We are more then a normal telecom company. We also sell selected devices, offers Smart Life services for the best experience, and give you a certified assistance for any problem
-                      </p>
-            </td>
-                   <td width='50%'>
-                  <table width='100%'>
-              <tr>
-                  <a href=" ">Discover Smart Life services</a>
-             </tr>
-                        <tr>
-                   <a href=" ">Discover our devices</a>
-                      </tr>
-             </table>
-            </td>
-              
-              </tr>
-          </table>
-          
-      </div>
- 
-      
-     
-  
-   
-    <script>
-      $.get('http://timwebs.altervista.org/query-header.php', {
-      }).done(function(gotData) {
-        $("#header").append(gotData);
-      }).fail(function(e) {
-      });
-    </script>
-    <script type="text/javascript">
-      $(document).bind("mobileinit", function () {
-        $.support.cors = true;
-        $.mobile.allowCrossDomainPages = true;
-      });
-    </script>
-  </body>
-</html>
+    </div>
+  </div>
+  </div>
+  <script>
+    $.get('http://timwebs.altervista.org/query-header.php', {
+    }).done(function(gotData) {
+      $("#header").append(gotData);
+    });
+  </script>
+</body>

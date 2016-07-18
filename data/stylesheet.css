@@ -179,6 +179,14 @@ div.infoBOXSimple{
   
 }
 
+div.divHome{
+ border-color: black;
+    border-style: solid;
+    border-radius: 0.1%;
+    position:relative;
+bottom:0px;
+}
+
 
 table.infoTABLE{
     text-align: center;
