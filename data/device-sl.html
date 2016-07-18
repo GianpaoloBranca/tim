@@ -9,7 +9,7 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-    <link rel="stylesheet" href="../css/stylesheet.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="stylesheet.css" media="screen" title="no title" charset="utf-8">
     <title></title>
 </head>
 <body><!-- BEGIN AV_TOOLBAR -->
@@ -41,7 +41,7 @@
         <h1>Available SL Services</h1>
         <br>
         <ul id="service-list" class="large">
-        </ul>
+        </ul>     
       </div>
     </div>
   </div>
@@ -60,16 +60,16 @@
       }
     }
   };
-
+  
   var id = getUrlParameter('id');
-
+  
   $.get('http://timwebs.altervista.org/query-device.php?id=' + id, {
   }).done(function(gotData) {
     try{
       decoded = JSON.parse(gotData);
       document.title = decoded.name;
-      $("#category").append("<a href='devices-by-category.html?type="
-      				+ decoded.type + "'>"
+      $("#category").append("<a href='devices-by-category.html?type=" 
+      				+ decoded.type + "'>" 
                     + decoded.type + "</a>");
       $("#device").append("<a href='device.html?id="
       				+ decoded.id + "'>"
@@ -80,17 +80,17 @@
       return;
     };
   });
-
+  
   $.get('http://timwebs.altervista.org/query-device-sl.php?id=' + id, {
   }).done(function(gotData) {
   	try {
       console.log(gotData);
-      decoded = JSON.parse(gotData);
+      decoded = JSON.parse(gotData); 
       for(var i = 0; i < Object.keys(decoded).length; i++) {
-        $("#service-list").append("<a href='SLservice.html?id="
-       				+ decoded[i].id + "' ><li>"
+        $("#service-list").append("<a href='SLservice.html?id=" 
+       				+ decoded[i].id + "' ><li>" 
                     + decoded[i].name + "</li></a>");
-      }
+      }    
     } catch (Exception) {
       console.log(Exception);
     };
@@ -105,3 +105,4 @@
 </script>
 </body>
 </html>
+

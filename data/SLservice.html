@@ -105,13 +105,13 @@
 
           $("#se").append(decoded.name);
 			$("#pro").append("<h2 style='color : red'>"+decoded.pro +"</h2>");
-		 $("#devices").append("<a href='SLforDevices.html?id="+ decoded.id + "&name="+ decoded.name +"'> <img width='60%' src='/img/SL-DeviceLink.png'/></a>");
+		 $("#devices").append("<a href='SLforDevices.html?id="+ decoded.id + "&name="+ decoded.name +"'> <img width='60%' src='http://timwebs.altervista.org/data/img/SL-DeviceLink.png'/></a>");
 
 
-          $("#1img").append("<img width='75%' src='" + decoded.img1 + "'/>");
+          $("#1img").append("<img width='75%' src='http://timwebs.altervista.org/data" + decoded.img1 + "'/>");
           $("#general").append("<p class='textColorWhite'>" + decoded.general + "</p>");
           for(var i = 2; i <5; i++) {
-            $("#" + i + "img").append("<img width='50%' src='" + $(decoded).attr("img" + i) + "'/>");
+            $("#" + i + "img").append("<img width='50%' src='http://timwebs.altervista.org/data" + $(decoded).attr("img" + i) + "'/>");
           }
           $("#activation").append("<p class='textColorWhite'>" + decoded.activation + "</p>");
 

@@ -10,7 +10,8 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-    <link rel="stylesheet" href="css/stylesheet.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="stylesheet.css" media="screen" title="no title" charset="utf-8">
+    <title>Devices</title>
   </head>
   <body>
     <div id="banner">
@@ -27,5 +28,20 @@
     </ul>
   </div>
 </nav>
+    <a href="devices.html">
+    <h1>HELLO</h1></a>
+    <script>
+      $.get('http://timwebs.altervista.org/query-header.php', {
+      }).done(function(gotData) {
+        $("#header").append(gotData);
+      }).fail(function(e) {
+      });
+    </script>
+    <script type="text/javascript">
+      $(document).bind("mobileinit", function () {
+          $.support.cors = true;
+          $.mobile.allowCrossDomainPages = true;
+      });
+  </script>
   </body>
 </html>
