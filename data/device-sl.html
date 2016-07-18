@@ -84,8 +84,11 @@
   $.get('http://timwebs.altervista.org/query-device-sl.php?id=' + id, {
   }).done(function(gotData) {
   	try {
-      console.log(gotData);
       decoded = JSON.parse(gotData); 
+      if(Object.keys(decoded).length == 0) {
+      	$("#service-list").append("<li>No Service available for this device!</li>");
+      }
+      
       for(var i = 0; i < Object.keys(decoded).length; i++) {
         $("#service-list").append("<a href='SLservice.html?id=" 
        				+ decoded[i].id + "' ><li>" 

@@ -21,17 +21,21 @@
       <li class="active" id="page-name"></li>
     </ol>
     <div class= "container">
-      <div class = "row">
-        <div class = "col-md-3 col-md-offset-0 col-sm-5 col-sm-offset-1" id="col0">
+      <div class = "row" style="display: flex; display: -webkit-box;
+                                display: -moz-box;    
+                                display: -ms-flexbox; 
+                                display: -webkit-flex; 
+                                display: flex;  flex-wrap: wrap;">
+        <div class = "col-md-3 col-sm-6"  style="height=100%" id="col0">
 
         </div>
-        <div class = "col-md-3 col-sm-5" id="col1">
+        <div class = "col-md-3 col-sm-6" id="col1" style="height=100%">
 
         </div>
-        <div class = "col-md-3 col-md-offset-0 col-sm-5 col-sm-offset-1" id="col2">
+        <div class = "col-md-3 col-sm-6" id="col2" style="height=100%">
 
         </div>
-        <div class = "col-md-3 col-sm-5" id="col3">
+        <div class = "col-md-3 col-sm-6" id="col3" style="height=100%">
 
         </div>
       </div>
@@ -59,47 +63,71 @@
         $("#page-name").append('discounted');
         $.get('http://timwebs.altervista.org/query-discounted.php', {
         }).done(function(gotData) {
-          parser(gotData);
+          try{
+            decoded = JSON.parse(gotData);
+            console.log(decoded);
+            for(var i = 0; i < Object.keys(decoded).length; i++) {
+
+              if(decoded[i].discount == 0) {
+                var div = $("<div class='bordered'><p class='text-center large'>"
+                            + "<a href='device.html?id=" + decoded[i].id + "' >"
+                            + "<img src='http://timwebs.altervista.org/data/img/d_" + decoded[i].name + "_0.jpg' width='100%'/></a>"
+                            + decoded[i].name
+                            + "<br><b>" + decoded[i].price + " €</b></p></div><br>");
+              } else {
+                var div = $("<div class='bordered'><p class='text-center large'>"
+                            + "<a href='device.html?id=" + decoded[i].id + "' >"
+                            + "<img src='http://timwebs.altervista.org/data/img/d_" + decoded[i].name + "_0.jpg' width='100%'/></a>"
+                            + decoded[i].name
+                            + "<br><b>"
+                            + "<span style='color:red'>" + (decoded[i].price - decoded[i].discount) + "€ </b></span>"
+                            + "<del>" + decoded[i].price + "€</del></p></div><br>");
+
+              }
+              $("#col" + i%4).append(div);
+            }
+          }catch (Exception) {
+            console.log(Exception);
+            return;
+          }
         });
       } else {
-      
-		document.title = deviceType;
+
+        document.title = deviceType;
         $("#page-name").append(deviceType);
         $.get('http://timwebs.altervista.org/query-devices.php?type=' + deviceType, {
         }).done(function(gotData) {
-        	parser(gotData);
-        });
-      
-      function parser(gotData) {
-        try{
-          decoded = JSON.parse(gotData);
-          console.log(decoded);
-          for(var i = 0; i < Object.keys(decoded).length; i++) {
+          try{
+            decoded = JSON.parse(gotData);
+            console.log(decoded);
+            for(var i = 0; i < Object.keys(decoded).length; i++) {
 
-            if(decoded[i].discount == 0) {
-              var div = $("<div class='bordered'><p class='text-center large'>"
-                          + "<a href='device.html?id=" + decoded[i].id + "' >"
-                          + "<img src='http://timwebs.altervista.org/data/img/d_" + decoded[i].name + "_0.jpg' width='100%'/></a>"
-                          + decoded[i].name
-                          + "<br><b>" + decoded[i].price + " €</b></p></div><br>");
-            } else {
-              var div = $("<div class='bordered'><p class='text-center large'>"
-                          + "<a href='device.html?id=" + decoded[i].id + "' >"
-                          + "<img src='http://timwebs.altervista.org/data/img/d_" + decoded[i].name + "_0.jpg' width='100%'/></a>"
-                          + decoded[i].name
-                          + "<br><b>"
-                          + "<span style='color:red'>" + (decoded[i].price - decoded[i].discount) + "€ </b></span>"
-                          + "<del>" + decoded[i].price + "€</del></p></div><br>");
+              if(decoded[i].discount == 0) {
+                var div = $("<div class='bordered'><p class='text-center large'>"
+                            + "<a href='device.html?id=" + decoded[i].id + "' >"
+                            + "<img src='http://timwebs.altervista.org/data/img/d_" + decoded[i].name + "_0.jpg' width='100%'/></a>"
+                            + decoded[i].name
+                            + "<br><b>" + decoded[i].price + " €</b></p></div><br>");
+              } else {
+                var div = $("<div class='bordered'><p class='text-center large'>"
+                            + "<a href='device.html?id=" + decoded[i].id + "' >"
+                            + "<img src='http://timwebs.altervista.org/data/img/d_" + decoded[i].name + "_0.jpg' width='100%'/></a>"
+                            + decoded[i].name
+                            + "<br><b>"
+                            + "<span style='color:red'>" + (decoded[i].price - decoded[i].discount) + "€ </b></span>"
+                            + "<del>" + decoded[i].price + "€</del></p></div><br>");
 
+              }
+              $("#col" + i%4).append(div);
             }
-            $("#col" + i%4).append(div);
+          }catch (Exception) {
+            console.log(Exception);
+            return;
           }
-        }catch (Exception) {
-          console.log(Exception);
-          return;
-        }
+        });
       }
-      }
+
+
     </script>
     <script>
       $.get('http://timwebs.altervista.org/query-header.php', {

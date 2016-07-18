@@ -12,7 +12,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
     <link rel="stylesheet" href="stylesheet.css" media="screen" title="no title" charset=“utf-8”>
 
-    <title></title>
+    <title id="Boss"></title>
   </head>
   <body class = "backgroundSL">
     <div id="header">
@@ -83,13 +83,15 @@
       };
       var service = getUrlParameter('id');
       var decoded;
-      document.title = service;
+      
       $.get('http://timwebs.altervista.org/SLServiceData.php?id=' + service, {
       }).done(function(gotData) {
         try{
           console.log(gotData);
           decoded = JSON.parse(gotData);
           $("#title").append(decoded.name);
+          $("#Boss").append(decoded.name);
+          
           var a = (parseInt(decoded.id)-1);
           if (a <= 0){a="23";}
          

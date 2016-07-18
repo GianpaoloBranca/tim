@@ -10,26 +10,49 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-    <link rel="stylesheet" href="stylesheet.css" media="screen" title="no title" charset="utf-8">
-    <title>Devices</title>
+    <link rel="stylesheet" href="data/stylesheet.css" media="screen" title="no title" charset="utf-8">
+    <title>Home</title>
   </head>
   <body>
     <div id="banner">
-    <img id="banner_image" src="http://www.diregiovani.it/wp-content/uploads/2016/01/Il-nuovo-Marchio-TIM_13-gennaio-2016.jpg">
-</div>
-<nav class="navbar navbar-default no-margin-bottom">
-  <div class="container-fluid">
-	<ul class="nav nav-pills">
-      <li role="presentation"><a href="#">Assistance</a></li>
-      <li role="presentation"><a href="data/devices.html">Devices</a></li>
-      <li role="presentation"><a href="data/SmartLifePage.html">Smart Life</a></li>
-      <li role="presentation"><a href="data/Projects.html">Who we are</a></li>
-      <li role="presentation"><a href="data/the-group.html">The group</a></li>
-    </ul>
-  </div>
-</nav>
-    <a href="devices.html">
-    <h1>HELLO</h1></a>
+      <img id="banner_image" src="http://www.diregiovani.it/wp-content/uploads/2016/01/Il-nuovo-Marchio-TIM_13-gennaio-2016.jpg">
+    </div>
+    <nav class="navbar navbar-default no-margin-bottom">
+      <div class="container-fluid">
+        <ul class="nav nav-pills">
+          <li role="presentation"><a href="data/Categories_of_assistance_services.html">Assistance</a></li>
+          <li role="presentation"><a href="data/devices.html">Devices</a></li>
+          <li role="presentation"><a href="data/SmartLifePage.html">Smart Life</a></li>
+          <li role="presentation"><a href="data/Projects.html">Who we are</a></li>
+          <li role="presentation"><a href="data/the-group.html">The group</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <img src="http://timwebs.altervista.org/data/img/main.jpg" width="100%" style="right:0; left:0; position:absolute"/>
+          <div class="text-center" style="position: absolute; top:30px; right:0; left:0;" width="100%">
+            <p class="very-large" style="color:white;">Welcome in the first italian telecom company!</p>
+          </div>
+        </div>
+      </div>
+        <h2 align="center"> More than what you think </h2>
+    <table>
+    <tr>
+    <td width='50%'>
+    <p>
+    We are more then a normal telecom company. We also sell selected devices, offers Smart Life services for the best experience, and give you a certified assistance for any problem
+    </p>
+    </td>
+    <td>
+   <td width='50%'>
+    </tr>
+    </table>
+    </div>
+     
+  
+   
     <script>
       $.get('http://timwebs.altervista.org/query-header.php', {
       }).done(function(gotData) {
@@ -39,9 +62,9 @@
     </script>
     <script type="text/javascript">
       $(document).bind("mobileinit", function () {
-          $.support.cors = true;
-          $.mobile.allowCrossDomainPages = true;
+        $.support.cors = true;
+        $.mobile.allowCrossDomainPages = true;
       });
-  </script>
+    </script>
   </body>
 </html>

@@ -126,11 +126,14 @@ div.DIV5{
 }
 img.groupMenuSL{
     border-radius: 0.7em;
-   
-    width: 75%;
-    
-   
+    width: 95%; 
 }
+
+img.groupMenu{
+    border-radius: 0.7em;
+    width: 95%; 
+}
+
 
 div.simpleBoxSL{
  border-color: white;

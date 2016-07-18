@@ -17,7 +17,7 @@
     <div id="header">
     </div>
     <ol class="breadcrumb">
-      <li><a href="devices.php">Devices</a></li>
+      <li><a href="devices.html">Devices</a></li>
       <li id="prev-page"></li>
       <li class="active" id="bc-name"></li>
     </ol>
@@ -109,6 +109,7 @@
             }
 
 			$("#sl-btn").attr("href", "device-sl.html?id=" + id);
+            $("#as-btn").attr("href", "device-assistance.html?id=" + id);
 
 			console.log('http://timwebs.altervista.org/query-images.php?url=' + decoded.name + "&i=" + decoded.images);
             $.get('http://timwebs.altervista.org/query-images.php?url=' + decoded.name + "&i=" + decoded.images, {  
@@ -143,8 +144,6 @@
         $.get('http://timwebs.altervista.org/query-header.php', {
         }).done(function(gotData) {
           $("#header").append(gotData);
-        }).fail(function() {
-          renderError();
         });
       </script>
     </div>
